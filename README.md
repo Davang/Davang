@@ -1,16 +1,15 @@
-### Hi there 👋
+# David Angosto Github profile
 
-<!--
-**Davang/Davang** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+This repository contains all my config files for different enviroments. It also have some readmes about my workflow and how I do things.
 
-Here are some ideas to get you started:
+## [git](./GIT.md)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+In the doc I explain my git strategy, naming convention for branches and anything related to it.
+
+## [project](./PROJECT.md)
+
+In this one you may find how I organize the projects depending on its type, programming languague, target and much more.
+
+---
+
+In case you have any doubt do not hesitate to contact me.
