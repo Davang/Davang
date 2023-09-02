@@ -10,6 +10,10 @@ In the doc I explain my git strategy, naming convention for branches and anythin
 
 In this one you may find how I organize the projects depending on its type, programming languague, target and much more.
 
+## [coding guidelines](./CODING_GUIDLINES.md)
+
+In this one you may find some general coding guidelines I take and links to ones of different languagues.
+
 ---
 
-In case you have any doubt do not hesitate to contact me.
+In case you have any doubt do not hesitate to contact me. Contact info maybe found in my profile.
