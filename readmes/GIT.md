@@ -5,7 +5,7 @@ Github is used for remotes. Prefer ssh over https, except for public repositorie
 
 ## Branch strategy
 
-Git flow is used as branch strategy, branch naming is discussed in the next section.
+Git flow is used as branch strategy. Check branc naming section for more information.
 
 ## Branch naming
 
@@ -17,12 +17,12 @@ There are two expections: *develop* and *main*. For unit testing branches the pr
 ### main 
 
 * Principal branch with releases.
-* No code should be committed to it, all commits should be merges of pull requests.
+* No code should be committed to it, all commits should be merged by pull requests.
 
 ### develop 
 
 * Principal branch with code in development.
-* No code should be committed to it, all commits should be merges of pull requests. 
+* No code should be committed to it, all commits should be merged by pull requests. 
 
 ### feature/\*
 
@@ -33,13 +33,13 @@ There are two expections: *develop* and *main*. For unit testing branches the pr
 ### staging/\*
 
 * Branches used to create a release from develop, they may implement some bugfixing or testing, no new funcionality.
+* The name should be a Version number, check versioning for mor information.
 * They are created from develop and merged to main.
 
 ### bugfix/\*
 
 * Branches that are used to solve a bug or an issue for a released code.
-* They are created from main or staging and merged to it.
-  
+* They are created from main or staging and merged to themselves.
 
 ### hotfix/\*
 
@@ -48,23 +48,22 @@ There are two expections: *develop* and *main*. For unit testing branches the pr
 
 ### staging/\*
 
-* Branches 
+* Branches that fix and document a code in develop that is ready to released.
 * They are created from develop and merged to main.
 
 ### doc/\*
 
-* Branches that implement new source code or a new functionality.
+* Branches that add docuemntation to source code.
 * They are created from develop or main and merged to themselves.
 
 ### chore/\*
 
-* Branches that are used for maintenance of the repository 
+* Branches that are used for maintenance of the repository or manage non source code files.
 * They are created from develop or main and merged to themselves.
-
 
 ### \*/ut/\*
 
-* Branches that implement new source code or a new functionality.
+* Branches that implement new unit testing the prefix should be any of the other branch type.
 * They are created from develop and merged to it.
 
 
@@ -79,4 +78,4 @@ Examples of valid branch names:
 
 ---
 
-David Angosto
+Danvang
