@@ -5,7 +5,7 @@ Github is used for remotes. Prefer ssh over https, except for public repositorie
 
 ## Branch strategy
 
-Git flow is used as branch strategy. Check branc naming section for more information.
+Git flow is used as branch strategy. Check branch naming section for more information.
 
 ## Branch naming
 

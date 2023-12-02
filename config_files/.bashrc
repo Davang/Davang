@@ -56,14 +56,26 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+parse_git_branch () {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+parse_git_tag () {
+  git describe --tags 2> /dev/null
+}
+
+parse_git_branch_or_tag() {
+  local OUT="$(parse_git_branch)"
+  if [ "$OUT" == " ((no branch))" ]; then
+    OUT="($(parse_git_tag))";
+  fi
+  echo $OUT
 }
 
 
 
 if [ "$color_prompt" = yes ]; then
-    PS1='\[\033[01;93m\]|\D{%F-%T}|\[\033[00m\]${debian_chroot:+($debian_chroot)}\[\033[01;95m\]<\u@\h>\n\[\033[01;92m\]\w:\[\033[01;96m\]$(parse_git_branch)\[\033[00m\]\$ '
+    PS1='\[\033[01;93m\]|\D{%F-%T}|\[\033[00m\]${debian_chroot:+($debian_chroot)}\[\033[01;95m\]<\u@\h>\n\[\033[01;92m\]\w:\[\033[01;96m\]$(parse_git_branch_or_tag)\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
 fi
