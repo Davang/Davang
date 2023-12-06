@@ -135,6 +135,27 @@ if ! shopt -oq posix; then
 fi
 
 # custom aliases
-
+## espressif
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
-alias get_davang_idf='. $HOME/esp/esp-davang/export.sh'
+alias get_davang_idf='
+. $HOME/esp/esp-idf/export.sh
+. $HOME/esp/esp-davang/export.sh'
+
+## rust
+alias get_rust='. $HOME/.cargo/env'
+
+## ada
+alias get_ada='export PATH=$PATH:$HOME/alire/bin'
+
+## arm
+alias get_arm='
+export GCC_TOOLCHAIN_13_2_0=$HOME/arm-cmsis/toolchain/gnu/13.2/arm-none-eabi/bin
+export CMSIS_PACK_ROOT=$HOME/arm-cmsis/packs
+export CMSIS_COMPILER_ROOT=$HOME/arm-cmsis/toolbox/etc
+export PATH=$PATH:$HOME/arm-cmsis/toolbox/bin
+export PATH=$PATH:$GCC_TOOLCHAIN_13_2_0
+'
+
+## risc-v
+alias get_riscv_gcc='export PATH=$PATH:$HOME/riscv/toolchain/gcc/riscv32-elf-20231122/bin'
+alias get_riscv_clang='export PATH=$PATH:$HOME/riscv/toolchain/llvm/riscv32-elf-20231122/bin'
