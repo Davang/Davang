@@ -22,7 +22,8 @@ Mainly inspired by:
 
 ### 1. Files and folders
 
-All source files and directories should be camel_case.
+* All source files and directories should be camel_case.
+
 Some valid examples are: resource_mananger.h, resource_mananger.c, main.cpp, main.hpp.
 
 * _c++_ source files should be: `\*.cpp`.
